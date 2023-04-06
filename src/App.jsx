@@ -4,6 +4,10 @@ import './App.css';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import SignupPage from './pages/Signup';
 import LoginPage from './pages/login';
+require('dotenv').config();
+const mysql = require('mysql2');
+const connection = mysql.createConnection(process.env.DATABASE_URL);
+console.log('Connected to PlanetScale!');
 
 function App() {
   return (
