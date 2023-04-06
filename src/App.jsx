@@ -4,9 +4,14 @@ import './App.css';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import SignupPage from './pages/Signup';
 import LoginPage from './pages/login';
-require('dotenv').config();
-const mysql = require('mysql2');
-const connetion = mysql.createConnection(process.env.DATABASE_URL);
+import.meta.env.VITE_SQL;
+
+//const mysql = require('mysql2');
+if (import.meta.env.MODE === 'development') {
+  //use dev keys
+} else {
+  //use .env variables
+}
 
 function App() {
   return (
