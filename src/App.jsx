@@ -6,8 +6,7 @@ import SignupPage from './pages/Signup';
 import LoginPage from './pages/login';
 require('dotenv').config();
 const mysql = require('mysql2');
-const connection = mysql.createConnection(process.env.DATABASE_URL);
-console.log('Connected to PlanetScale!');
+const connetion = mysql.createConnection(process.env.DATABASE_URL);
 
 function App() {
   return (
